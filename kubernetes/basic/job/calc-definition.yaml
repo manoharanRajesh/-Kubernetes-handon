@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: calculate
+spec:
+  completions: 3
+  parallelism: 3
+  template:
+    spec:
+      containers:
+        - name: calculate add
+          image: ubuntu
+          command:
+            - 'expr'
+            - '3'
+            - '+'
+            - '4'
+      restartPolicy: Never
+

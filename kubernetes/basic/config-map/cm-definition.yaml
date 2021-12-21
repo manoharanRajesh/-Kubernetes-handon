@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-map-dev
+data:
+  app_key: sample_value1
+  app_key1: sample_value1
